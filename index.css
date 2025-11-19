@@ -1,0 +1,28 @@
+div#header{
+    position: sticky;
+    border-style: solid;
+    border-color: #635147;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D6B588;
+}
+
+div.row{
+    display: flex;
+    flex-direction: row;
+}
+
+div.tile{
+    width: 10vh;
+    height: 10vh;
+}
+
+img.card{
+    object-fit: contain;
+}
