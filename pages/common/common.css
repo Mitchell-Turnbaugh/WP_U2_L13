@@ -1,0 +1,8 @@
+div#header{
+    width: 100vw;
+    position: sticky;
+    border-style: solid;
+    border-color: #635147;
+    display: flex;
+    justify-content: space-evenly;
+}
