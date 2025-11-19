@@ -17,4 +17,5 @@ div.tile{
 
 img.card{
     object-fit: contain;
+    border-style: solid;
 }
