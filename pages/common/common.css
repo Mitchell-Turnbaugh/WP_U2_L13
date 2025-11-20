@@ -15,5 +15,8 @@ div#header{
 
 div#links{
     justify-content: space-evenly;
+}
+
+h2#title{
     color: #635147;
 }

@@ -6,10 +6,6 @@ body{
     height: 70vh;
 }
 
-h2.title{
-    color: #635147;
-}
-
 div.grid{
     display: flex;
     align-items: center;
