@@ -2,11 +2,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-}
-div.grid{
-    width: 100vw;
 }
 
 div.row{
@@ -19,7 +14,6 @@ div.tile{
     height: 10vh;
     border-style: solid;
     border-color: #635147;
-    margin: 5%;
 }
 
 img.card{
