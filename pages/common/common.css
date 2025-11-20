@@ -9,6 +9,10 @@ div#header{
     border-style: solid;
     border-color: #635147;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
+}
+
+div#links{
+    justify-content: space-evenly;
 }
