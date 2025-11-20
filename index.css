@@ -21,6 +21,7 @@ div.tile{
     height: 10vh;
     border-style: solid;
     border-color: #635147;
+    margin: -1px;
 }
 
 img.card{
