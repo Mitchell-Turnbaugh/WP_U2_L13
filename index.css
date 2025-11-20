@@ -3,7 +3,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 65vh;
+    height: 70vh;
 }
 
 div.grid{
