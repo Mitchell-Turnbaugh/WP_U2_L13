@@ -4,6 +4,12 @@ body{
     align-items: center;
 }
 
+div.grid{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 div.row{
     display: flex;
     flex-direction: row;
