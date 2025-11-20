@@ -10,4 +10,5 @@ div#header{
     border-color: #635147;
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
 }
