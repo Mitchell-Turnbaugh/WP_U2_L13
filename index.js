@@ -22,7 +22,5 @@ function randomCards(){
         img = choice(images);
         i.className = `card ${img}`;
         images = remove(images,img);
-        console.log(i)
     }
-    console.log(cards);
 }
