@@ -13,9 +13,10 @@ div.row{
 div.tile{
     width: 10vh;
     height: 10vh;
+    border-style: solid;
+    border-color: #635147;
 }
 
 img.card{
     object-fit: contain;
-    border-style: solid;
 }
