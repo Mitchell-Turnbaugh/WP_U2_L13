@@ -9,5 +9,14 @@ div#header{
     border-style: solid;
     border-color: #635147;
     display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div#links{
     justify-content: space-evenly;
+}
+
+h2#title{
+    color: #635147;
 }
