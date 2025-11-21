@@ -10,10 +10,6 @@ div#header{
     border-color: #635147;
     display: flex;
     align-items: center;
-    flex-direction: column;
-}
-
-div#links{
     justify-content: space-evenly;
 }
 

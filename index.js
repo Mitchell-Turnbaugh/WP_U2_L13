@@ -26,4 +26,13 @@ function randomCards(){
 }
 function flipCard(card){
     card.src = `resources/index/${card.className.split(" ")[1]}`;
+    card.className += " flipped";
+    const flippedCards = document.getElementsByClassName("flipped");
+    if(flippedCards.length !== 1){
+        if(card.className.split(" ")[1] === flippedCards[0].className.split(" ")[1]){
+            console.log("test");
+        }else{
+            card.style.display = "none"
+        }
+    }
 }
