@@ -22,8 +22,11 @@ div.tile{
     border-style: solid;
     border-color: #635147;
     margin: -1px;
+    background-color: white;
 }
 
 img.card{
-    object-fit: contain;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }

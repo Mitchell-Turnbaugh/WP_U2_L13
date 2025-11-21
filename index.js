@@ -26,4 +26,5 @@ function randomCards(){
 }
 function flipCard(card){
     card.src = `resources/index/${card.className.split(" ")[1]}`;
+    card.className += "flipped";
 }
