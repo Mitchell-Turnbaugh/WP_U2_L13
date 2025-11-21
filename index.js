@@ -23,4 +23,5 @@ function randomCards(){
         i.className = `card ${img}`;
         images = remove(images,img);
     }
+    
 }
