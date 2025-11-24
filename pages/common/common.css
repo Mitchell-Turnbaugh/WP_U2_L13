@@ -19,14 +19,13 @@ div#header{
 div#links{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
 }
 
 a.link{
     margin-left: 5%;
-    margin-right: 5%;
-    display: flex;
-    justify-content: center;
+    margin-right: 5%;  
 }
 
 h2#title{
