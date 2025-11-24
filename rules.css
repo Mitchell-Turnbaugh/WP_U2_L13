@@ -3,7 +3,7 @@ p#rules{
 }
 
 img.image{
-    width: 5vh;
+    max-width: 5vh;
     height: auto;
 }
 
