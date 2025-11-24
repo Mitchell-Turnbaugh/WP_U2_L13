@@ -31,7 +31,7 @@ function sleep(time){
     return new Promise((resolve) => setTimeout(resolve,time))
 }
 async function flipCard(card){
-    if(!card.className.includes("won")){
+    if(!card.className.includes("won") && !card.className.includes("flipped"){
         if(card.src === ""){
             card.src = `resources/index/${card.className.split(" ")[1]}`;
         }
