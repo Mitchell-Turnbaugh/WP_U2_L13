@@ -35,5 +35,8 @@ div#counters{
     color: #635147;
     display: flex;
     flex-direction: row;
-    
+}
+
+div#p1{
+    margin-right: 5%;
 }
