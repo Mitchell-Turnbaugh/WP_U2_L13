@@ -35,6 +35,7 @@ div#counters{
     color: #635147;
     display: flex;
     flex-direction: row;
+    width: 50%;
 }
 
 div#p1{
