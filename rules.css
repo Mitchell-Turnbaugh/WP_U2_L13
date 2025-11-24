@@ -2,6 +2,11 @@ p#rules{
     color: #635147;
 }
 
+img.image{
+    width: 10%;
+    height: auto;
+}
+
 div#images{
     color: #635147;
     display: flex;
