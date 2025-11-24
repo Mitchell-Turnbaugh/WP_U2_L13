@@ -35,7 +35,7 @@ async function flipCard(card){
         if(card.className.split(" ")[1] === flippedCards[0].className.split(" ")[1]){
             console.log("test");
         }else{
-            await sleep(1000)
+            await sleep(1000);
             card.style.display = "none";
         }
     }
