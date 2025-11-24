@@ -31,6 +31,10 @@ img.card{
     height: 100%;
 }
 
+h2#turn{
+    color: #635147;
+}
+
 div#counters{
     color: #635147;
     display: flex;
