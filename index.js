@@ -9,6 +9,9 @@ function randint(max){
 function choice(collection){
     return collection[randint(collection.length)];
 }
+function createGameplay(){
+    randomCards();
+}
 function randomCards(){
     const cards = document.getElementsByClassName("card");
     let images = ["acorn_icon.png","campfire_icon.png","caramel_apple_icon.jpg",
