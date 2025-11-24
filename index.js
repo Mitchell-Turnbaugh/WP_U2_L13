@@ -32,7 +32,9 @@ function sleep(time){
 }
 async function flipCard(card){
     if(!card.className.includes("won")){
-        card.src = `resources/index/${card.className.split(" ")[1]}`;
+        if(card.src === ""){
+            card.src = `resources/index/${card.className.split(" ")[1]}`;
+        }
         card.style.display = "";
         const flippedCards = document.getElementsByClassName("flipped"); 
         console.log(flippedCards.length)
