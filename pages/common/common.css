@@ -31,3 +31,11 @@ a.link{
 h2#title{
     color: #635147;
 }
+
+a:link{
+    color: #635147;
+}
+
+a:visited{
+    color: saddlebrown;
+}
