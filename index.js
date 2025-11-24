@@ -24,7 +24,10 @@ function randomCards(){
         images = remove(images,img);
     }   
 }
-function flipCard(card){
+function sleep(time){
+    return new Promise((resolve) => setTimeout(resolve,time))
+}
+async function flipCard(card){
     card.src = `resources/index/${card.className.split(" ")[1]}`;
     card.className += " flipped";
     const flippedCards = document.getElementsByClassName("flipped");
@@ -32,7 +35,8 @@ function flipCard(card){
         if(card.className.split(" ")[1] === flippedCards[0].className.split(" ")[1]){
             console.log("test");
         }else{
-            card.style.display = "none"
+            await sleep(1000)
+            card.style.display = "none";
         }
     }
 }
