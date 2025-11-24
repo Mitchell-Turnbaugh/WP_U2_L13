@@ -34,14 +34,14 @@ async function flipCard(card){
     if(!card.className.includes("won")){
         card.src = `resources/index/${card.className.split(" ")[1]}`;
         card.style.display = "";
-        card.className += " flipped";
-        const flippedCards = document.getElementsByClassName("flipped");
-        const cardSplit = card.className.split(" ");
-        const flippedCardsSplit = flippedCards[0].className.split(" ");
-        if(flippedCards.length !== 1){
-            if(card.className.split(" ")[1] === flippedCards[0].className.split(" ")[1]){
+        const flippedCards = document.getElementsByClassName("flipped"); 
+        console.log(flippedCards.length)
+        if(flippedCards.length !== 0){
+            console.log(flippedCards[0]);
+            const cardSplit = card.className.split(" ");
+            const flippedCardsSplit = flippedCards[0].className.split(" ");
+            if(card.src === flippedCards[0].src){
                 card.className = `${cardSplit[0]} ${cardSplit[1]} won `;
-                console.log(flippedCards[0])
                 flippedCards[0].className = `${flippedCardsSplit[0]} ${flippedCardsSplit[1]} won`;
             }else{
                 await sleep(1000);
@@ -50,6 +50,8 @@ async function flipCard(card){
                 card.className = `${cardSplit[0]} ${cardSplit[1]}`;
                 flippedCards[0].className = `${flippedCardsSplit[0]} ${flippedCardsSplit[1]}`;
             }
+        }else{
+            card.className += " flipped";
         }
     }
 }
