@@ -31,17 +31,25 @@ function sleep(time){
     return new Promise((resolve) => setTimeout(resolve,time))
 }
 async function flipCard(card){
-    card.src = `resources/index/${card.className.split(" ")[1]}`;
-    card.style.display = "";
-    card.className += " flipped";
-    const flippedCards = document.getElementsByClassName("flipped");
-    if(flippedCards.length !== 1){
-        if(card.className.split(" ")[1] === flippedCards[0].className.split(" ")[1]){
-            console.log("test");
-        }else{
-            await sleep(1000);
-            card.style.display = "none";
-            flippedCards[0].style.display = "none";
+    if(!card.className.includes("won")){
+        card.src = `resources/index/${card.className.split(" ")[1]}`;
+        card.style.display = "";
+        card.className += " flipped";
+        const flippedCards = document.getElementsByClassName("flipped");
+        const cardSplit = card.className.split(" ");
+        const flippedCardsSplit = flippedCards[0].className.split(" ");
+        if(flippedCards.length !== 1){
+            if(card.className.split(" ")[1] === flippedCards[0].className.split(" ")[1]){
+                card.className = `${cardSplit[0]} ${cardSplit[1]} won `;
+                console.log(flippedCards[0])
+                flippedCards[0].className = `${flippedCardsSplit[0]} ${flippedCardsSplit[1]} won`;
+            }else{
+                await sleep(1000);
+                card.style.display = "none";
+                flippedCards[0].style.display = "none";
+                card.className = `${cardSplit[0]} ${cardSplit[1]}`;
+                flippedCards[0].className = `${flippedCardsSplit[0]} ${flippedCardsSplit[1]}`;
+            }
         }
     }
 }
