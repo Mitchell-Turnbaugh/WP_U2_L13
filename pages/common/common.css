@@ -22,8 +22,10 @@ div#links{
 }
 
 a.link{
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
 }
 
 h2#title{
