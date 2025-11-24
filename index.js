@@ -32,6 +32,7 @@ function sleep(time){
 }
 async function flipCard(card){
     card.src = `resources/index/${card.className.split(" ")[1]}`;
+    card.style.display = "";
     card.className += " flipped";
     const flippedCards = document.getElementsByClassName("flipped");
     if(flippedCards.length !== 1){
@@ -40,6 +41,7 @@ async function flipCard(card){
         }else{
             await sleep(1000);
             card.style.display = "none";
+            flippedCards[0].style.display = "none";
         }
     }
 }
