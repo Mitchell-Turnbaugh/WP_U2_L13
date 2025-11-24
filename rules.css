@@ -1,0 +1,9 @@
+p#rules{
+    color: #635147;
+}
+
+div#images{
+    color: #635147;
+    display: flex;
+    justify-content: center;
+}
