@@ -14,7 +14,7 @@ div#header{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 div#links{
