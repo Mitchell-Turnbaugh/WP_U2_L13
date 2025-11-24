@@ -30,3 +30,19 @@ img.card{
     width: 100%;
     height: 100%;
 }
+
+h2#turn{
+    color: #635147;
+}
+
+div#counters{
+    color: #635147;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+
+div#p1{
+    margin-right: 5%;
+}
