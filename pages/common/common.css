@@ -21,6 +21,11 @@ div#links{
     flex-direction: row;
 }
 
+a.link{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
 h2#title{
     color: #635147;
 }
