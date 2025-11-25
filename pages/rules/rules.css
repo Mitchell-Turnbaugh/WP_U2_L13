@@ -1,5 +1,6 @@
 p#rules{
     color: #635147;
+    text-align: center;
 }
 
 img.image{
@@ -8,6 +9,7 @@ img.image{
 }
 
 div#images{
+    color: #635147;
     display: flex;
     justify-content: center;
 }
