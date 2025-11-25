@@ -1,3 +1,4 @@
+let canClick = true;
 function remove(collection,item){
     const index = collection.indexOf(item);
     collection.splice(index,1);
@@ -31,7 +32,8 @@ function sleep(time){
     return new Promise((resolve) => setTimeout(resolve,time))
 }
 async function flipCard(card){
-    if(!card.className.includes("won") && !card.className.includes("flipped")){
+    const cardSplit = card.className.split(" ");
+    if(!card.className.includes("won") && !card.className.includes("flipped") && canClick){
         if(card.src === ""){
             card.src = `resources/index/${card.className.split(" ")[1]}`;
         }
@@ -39,8 +41,8 @@ async function flipCard(card){
         const flippedCards = document.getElementsByClassName("flipped"); 
         console.log(flippedCards.length)
         if(flippedCards.length !== 0){
+            canClick = false;
             console.log(flippedCards[0]);
-            const cardSplit = card.className.split(" ");
             const flippedCardsSplit = flippedCards[0].className.split(" ");
             if(card.src === flippedCards[0].src){
                 card.className = `${cardSplit[0]} ${cardSplit[1]} won `;
@@ -55,5 +57,6 @@ async function flipCard(card){
         }else{
             card.className += " flipped";
         }
+        canClick = true;
     }
 }
