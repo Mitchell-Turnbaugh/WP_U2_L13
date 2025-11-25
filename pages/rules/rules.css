@@ -1,23 +1,17 @@
-<<<<<<< HEAD
-body{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-}
-=======
->>>>>>> 119880d066f5b9312156095036d03550c063da3a
 p#rules{
     color: #635147;
 }
 
 img.image{
-    width: 9%;
+    width: 10vh;
     height: auto;
 }
 
 div#images{
-    color: #635147;
     display: flex;
     justify-content: center;
+}
+
+h3#semiCaption{
+    color: #635147;
 }

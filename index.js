@@ -33,7 +33,7 @@ function sleep(time){
 }
 async function flipCard(card){
     const turn = document.getElementById("turn");
-    const turnUseable = (Number(turn.textContent.split(" ")[1].split("'")[0]));
+    let turnUseable = (Number(turn.textContent.split(" ")[1].split("'")[0]) + 1);
     const cardSplit = card.className.split(" ");
     if(!card.className.includes("won") && !card.className.includes("flipped") && canClick){
         if(card.src === ""){
@@ -49,16 +49,23 @@ async function flipCard(card){
             if(card.src === flippedCards[0].src){
                 card.className = `${cardSplit[0]} ${cardSplit[1]} won `;
                 flippedCards[0].className = `${flippedCardsSplit[0]} ${flippedCardsSplit[1]} won`;
+                if(turnUseable === 2){
+                    const p1match = document.getElementById("p1match");
+                    p1match.textContent = `Player One Match: ${Number(p1match.textContent.split(" ")[3]) + 1}`;
+                }else{
+                    const p2match = document.getElementById("p2match");
+                    p2match.textContent = `Player Two Match ${Number(p2match.textContent.split(" ")[3]) + 1}`;
+                }
             }else{
                 await sleep(1000);
                 card.style.display = "none";
                 flippedCards[0].style.display = "none";
-                card.className = `${cardSplit[0]} ${cardSplit[1]}`;
-                flippedCards[0].className = `${flippedCardsSplit[0]} ${flippedCardsSplit[1]}`;
-                if(turnUseable === 2){
+                card.className = `${cardSplit[0]} ${cardSplit[1]} notWon`;
+                flippedCards[0].className = `${flippedCardsSplit[0]} ${flippedCardsSplit[1]} notWon`;
+                if(turnUseable === 3){
                     turnUseable = 1;
                 }
-                turn.textContent = `Player ${(turnUseable + 1)}'s Turn`;
+                turn.textContent = `Player ${(turnUseable)}'s Turn`;
             }
         }else{
             card.className += " flipped";
