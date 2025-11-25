@@ -2,7 +2,7 @@ p#rules{
     color: #635147;
 }
 
-img.an_image{
+img.image{
     width: 10vh;
     height: auto;
 }
@@ -12,6 +12,6 @@ div#images{
     justify-content: center;
 }
 
-h5#semiCaption{
+h3#semiCaption{
     color: #635147;
 }
