@@ -1,4 +1,5 @@
 let canClick = true;
+cardsMatched = 0;
 function remove(collection,item){
     const index = collection.indexOf(item);
     collection.splice(index,1);
@@ -12,6 +13,10 @@ function choice(collection){
 }
 function createGameplay(){
     randomCards();
+    const p1win = document.getElementById("p1win");
+    const p2win = document.getElementById("p2win");
+    p1win.textContent = `Player One Wins: ${Number(sessionStorage.getItem("Player One Wins"))}`
+    p2win.textContent = `Player Two wins: ${Number(sessionStorage.getItem("Player Two Wins"))}`
 }
 function randomCards(){
     const cards = document.getElementsByClassName("card");
@@ -35,19 +40,6 @@ async function flipCard(card){
     const turn = document.getElementById("turn");
     let turnUseable = (Number(turn.textContent.split(" ")[1].split("'")[0]) + 1);
     const cardSplit = card.className.split(" ");
-    if(getElementsByClassName("notWon").length === 0){
-        const p1match = document.getElementById("p1match");
-        const p2match = document.getElementById("p2match");
-        if(Number(p1match.textContent.split(" ")[3]) >= Number(p2match.textContent.split(" ")[3])){
-            const p1win = document.getElementById("p1win");
-            p1win.textContent = `Player One Wins: ${Number(p1win.textContent.split(" ")[3]) + 1}`;
-        }else if(Number(p2match.textContent.split(" ")[3]) >= Number(p1match.textContent.split(" ")[3])) {
-            const p2win = document.getElementById("p2win");
-            p2win.textContent = `Player Two Wins: ${Number(p2win.textContent.split(" ")[3]) + 1}`;
-        }else{
-            
-        }
-    }
     if(!card.className.includes("won") && !card.className.includes("flipped") && canClick){
         if(card.src === ""){
             card.src = `resources/index/${card.className.split(" ")[1]}`;
@@ -69,6 +61,7 @@ async function flipCard(card){
                     const p2match = document.getElementById("p2match");
                     p2match.textContent = `Player Two Match ${Number(p2match.textContent.split(" ")[3]) + 1}`;
                 }
+                cardsMatched++;
             }else{
                 await sleep(1000);
                 card.style.display = "none";
@@ -84,5 +77,23 @@ async function flipCard(card){
             card.className += " flipped";
         }
         canClick = true;
+    }
+    if(document.getElementsByClassName("notWon").length === 0){
+        const p1match = document.getElementById("p1match");
+        const p2match = document.getElementById("p2match");
+        if(Number(p1match.textContent.split(" ")[3]) >= Number(p2match.textContent.split(" ")[3])){
+            const p1win = document.getElementById("p1win");
+            const wincount = Number(p1win.textContent.split(" ")[3]) + 1;
+            p1win.textContent = `Player One Wins: ${wincount}`;
+            sessionStorage.setItem("Player One Wins",wincount);
+        }else if(Number(p2match.textContent.split(" ")[3]) >= Number(p1match.textContent.split(" ")[3])) {
+            const p2win = document.getElementById("p2win");
+            const wincount = Number(p2win.textContent.split(" ")[3]) + 1;
+            p2win.textContent = `Player Two Wins: ${wincount}`;
+            sessionStorage.setItem("Player Two Wins",wincount)
+        }else{
+            const ties = document.getElementById("ties")
+            ties.textContent = `Ties ${Number(ties.textContent.split(" ")[1]) + 1}`
+        }
     }
 }
