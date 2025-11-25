@@ -33,7 +33,7 @@ function sleep(time){
 }
 async function flipCard(card){
     const turn = document.getElementById("turn");
-    turnUseable = (Number(turn.textContent.split(" ")[1].split("'")[0]));
+    const turnUseable = (Number(turn.textContent.split(" ")[1].split("'")[0]));
     const cardSplit = card.className.split(" ");
     if(!card.className.includes("won") && !card.className.includes("flipped") && canClick){
         if(card.src === ""){
