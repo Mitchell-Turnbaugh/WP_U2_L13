@@ -8,7 +8,10 @@ img.image{
 }
 
 div#images{
-    color: #635147;
     display: flex;
     justify-content: center;
+}
+
+h3#semi_caption{
+    color: #635147;
 }
