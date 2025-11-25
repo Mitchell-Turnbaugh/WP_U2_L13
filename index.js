@@ -86,14 +86,20 @@ async function flipCard(card){
             const wincount = Number(p1win.textContent.split(" ")[3]) + 1;
             p1win.textContent = `Player One Wins: ${wincount}`;
             sessionStorage.setItem("Player One Wins",wincount);
+            const turn = document.getElementById("turn");
+            turn.textContent = "Player 1 wins"
         }else if(Number(p2match.textContent.split(" ")[3]) >= Number(p1match.textContent.split(" ")[3])) {
             const p2win = document.getElementById("p2win");
             const wincount = Number(p2win.textContent.split(" ")[3]) + 1;
             p2win.textContent = `Player Two Wins: ${wincount}`;
             sessionStorage.setItem("Player Two Wins",wincount)
+            const turn = document.getElementById("turn");
+            turn.textContent = "Player 2 wins";
         }else{
-            const ties = document.getElementById("ties")
-            ties.textContent = `Ties ${Number(ties.textContent.split(" ")[1]) + 1}`
+            const ties = document.getElementById("ties");
+            ties.textContent = `Ties ${Number(ties.textContent.split(" ")[1]) + 1}`;
+            const turn = document.getElementById("turn");
+            turn.textContent = "Tie";
         }
     }
 }
