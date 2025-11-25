@@ -41,6 +41,7 @@ async function flipCard(card){
         const flippedCards = document.getElementsByClassName("flipped"); 
         console.log(flippedCards.length)
         if(flippedCards.length !== 0){
+            
             canClick = false;
             console.log(flippedCards[0]);
             const flippedCardsSplit = flippedCards[0].className.split(" ");
@@ -53,6 +54,12 @@ async function flipCard(card){
                 flippedCards[0].style.display = "none";
                 card.className = `${cardSplit[0]} ${cardSplit[1]}`;
                 flippedCards[0].className = `${flippedCardsSplit[0]} ${flippedCardsSplit[1]}`;
+                const turn = document.getElementById("turn");
+                turnUseable = (Number(turn.textContent.split(" ")[1].split("'")[0]) + 1);
+                if(turnUseable === 3){
+                    turnUseable = 1;
+                }
+                turn.textContent = `Player ${(turnUseable)}'s Turn`;
             }
         }else{
             card.className += " flipped";
