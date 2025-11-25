@@ -7,8 +7,11 @@ img.image{
     height: auto;
 }
 
-div#images{
+h3#semiCaption{
     color: #635147;
+}
+
+div#images{
     display: flex;
     justify-content: center;
 }
