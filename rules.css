@@ -2,13 +2,16 @@ p#rules{
     color: #635147;
 }
 
-img.image{
-    max-width: 10vh;
+img.an_image{
+    width: 10vh;
     height: auto;
 }
 
 div#images{
-    color: #635147;
     display: flex;
     justify-content: center;
+}
+
+h3#semi_caption{
+    color: #635147;
 }
