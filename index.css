@@ -41,12 +41,14 @@ div#counters{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 50%;
 }
 
 div#winTracker{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 div#p1{
