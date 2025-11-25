@@ -2,10 +2,10 @@ p#rules{
     color: #635147;
 }
 
-img.an_image{
+/*img.an_image{
     width: 10vh;
     height: auto;
-}
+}*/
 
 div#images{
     display: flex;
