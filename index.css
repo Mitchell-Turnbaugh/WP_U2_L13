@@ -44,6 +44,11 @@ div#counters{
     width: 50%;
 }
 
+div#winTracker{
+    display: flex;
+    flex-direction: row;
+}
+
 div#p1{
     margin-right: 5%;
 }
