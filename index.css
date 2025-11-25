@@ -23,6 +23,7 @@ div.tile{
     border-color: #635147;
     margin: -1px;
     background-color: #E5AA70;
+    cursor: crosshair;
 }
 
 img.card{
