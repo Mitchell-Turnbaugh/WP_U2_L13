@@ -39,7 +39,7 @@ h2#turn{
 div#counters{
     color: #635147;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 50%;
 }
