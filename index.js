@@ -24,7 +24,7 @@ function randomCards(){
     ];
     for(i of cards){
         img = choice(images);
-        i.className = `card ${img}`;
+        i.className = `card ${img} notWon`;
         images = remove(images,img);
     }   
 }
@@ -35,6 +35,19 @@ async function flipCard(card){
     const turn = document.getElementById("turn");
     let turnUseable = (Number(turn.textContent.split(" ")[1].split("'")[0]) + 1);
     const cardSplit = card.className.split(" ");
+    if(getElementsByClassName("notWon").length === 0){
+        const p1match = document.getElementById("p1match");
+        const p2match = document.getElementById("p2match");
+        if(Number(p1match.textContent.split(" ")[3]) >= Number(p2match.textContent.split(" ")[3])){
+            const p1win = document.getElementById("p1win");
+            p1win.textContent = `Player One Wins: ${Number(p1win.textContent.split(" ")[3]) + 1}`;
+        }else if(Number(p2match.textContent.split(" ")[3]) >= Number(p1match.textContent.split(" ")[3])) {
+            const p2win = document.getElementById("p2win");
+            p2win.textContent = `Player Two Wins: ${Number(p2win.textContent.split(" ")[3]) + 1}`;
+        }else{
+            
+        }
+    }
     if(!card.className.includes("won") && !card.className.includes("flipped") && canClick){
         if(card.src === ""){
             card.src = `resources/index/${card.className.split(" ")[1]}`;
